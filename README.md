@@ -26,5 +26,11 @@ Again, we set ourselves three internal milestones, one each week up to project m
 * 9/12 : Respond to research questions 3,4 and 5
 * 16/12 : Finalize the notebook and write the report
 
+Decided to remove 'other' node type, because it's only ~3K nodes, and they are all isolated, it just brings noise.
+
+Decided to take back column 'link' we droped earlier, because it contains additionnal info about edge type.
+
+Merged Node/Edge dataframe into one big one.
+
 # Questions for TAs
 If we have some questions, we're going to ask TAs in person during labs and office hours :)
