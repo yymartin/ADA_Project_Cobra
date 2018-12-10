@@ -28,3 +28,6 @@ Again, we set ourselves three internal milestones, one each week up to project m
 
 # Questions for TAs
 If we have some questions, we're going to ask TAs in person during labs and office hours :)
+
+# Datastory
+The datastory is available at https://yymartin.github.io/ADA_Project_Cobra/
