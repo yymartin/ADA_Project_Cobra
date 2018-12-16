@@ -6,9 +6,15 @@ The dataset we chose for this project is the Panama Papers. Our main idea is to 
 
 # Research questions
 1) How does tax evasion evolves over time? Does the number of offshore societies increases? 
+
 2) Do people that are related to one offshore account tend to be related to many more? In other words, is it more likely to have another account once you already have one, than it is to have at least one account?
+
 3) Do many people share one offshore society or do they tend to have their own?
-4) How many intermediate societies are there between people and their offshore company?
+
+(OLD) 4) How many intermediate societies are there between people and their offshore company? 
+After working more with the data we realized this question didn'ts really made sense. Entities connected together are not intermediaries, they usually are similar entites or have the same name. Here is the new question we replaced it with :
+(NEW) 4) How does the proportion of intermediaries depend on the category of company (number of connections) ?
+
 5) Is there a correlation between the location of the people and the location of their offshore society?
 
 # Dataset
@@ -28,9 +34,7 @@ Again, we set ourselves three internal milestones, one each week up to project m
 
 Decided to remove 'other' node type, because it's only ~3K nodes, and they are all isolated, it just brings noise.
 
-Decided to take back column 'link' we droped earlier, because it contains additionnal info about edge type.
-
-Merged Node/Edge dataframe into one big one.
+Merged Node/Edge dataframe into one big one (edges_completed).
 
 # Questions for TAs
 If we have some questions, we're going to ask TAs in person during labs and office hours :)
