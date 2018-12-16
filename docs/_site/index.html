@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>ADA_Project_Cobra</title>
+  <title>Introduction</title>
 
   <meta name="author" content="Pierre Latécoère, Simon Roquette and Yoan Martin" />
 
@@ -55,11 +55,11 @@
   
 
   
-  <meta property="og:title" content="ADA_Project_Cobra" />
+  <meta property="og:title" content="Introduction" />
   
 
    
-  <meta property="og:description" content="```python from IPython.display import Image ``` # Introduction ## What are the Panama papers? Panama papers are the leak of 11.5 millions documents. They describe details of evasion tax from the 1970s to 2015. For this project, we have access to the database of https://www.occrp.org/en/panamapapers/database. It contains four files describing...">
+  <meta property="og:description" content="# Introduction ## What are the Panama papers? Panama papers are the leak of 11.5 millions documents. They describe details of evasion tax from the 1970s to 2015. For this project, we have access to the database of https://www.occrp.org/en/panamapapers/database. It contains four files describing different leaks of evasion tax: Panama...">
   
 
 
@@ -81,11 +81,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="ADA_Project_Cobra" />
+  <meta name="twitter:title" content="Introduction" />
   
 
   
-  <meta name="twitter:description" content="```python from IPython.display import Image ``` # Introduction ## What are the Panama papers? Panama papers are the leak of 11.5 millions documents. They describe details of evasion tax from the 1970s to 2015. For this project, we have access to the database of https://www.occrp.org/en/panamapapers/database. It contains four files describing...">
+  <meta name="twitter:description" content="# Introduction ## What are the Panama papers? Panama papers are the leak of 11.5 millions documents. They describe details of evasion tax from the 1970s to 2015. For this project, we have access to the database of https://www.occrp.org/en/panamapapers/database. It contains four files describing different leaks of evasion tax: Panama...">
   
 
   
@@ -146,9 +146,6 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
-</code></pre></div></div>
-
 <h1 id="introduction">Introduction</h1>
 
 <h2 id="what-are-the-panama-papers">What are the Panama papers?</h2>
@@ -158,6 +155,10 @@
 <h2 id="definition-of-important-terms">Definition of important terms</h2>
 
 <p>Before going into the details, we start by defining important terms which will be used in this project.</p>
+
+<h3 id="nodes-and-edges">Nodes and edges</h3>
+
+<p>This database can be represented as a graph. It contains nodes which are connected using edges. In this project, a node can be an officer, an intermediary or entity. It contains a country, a juridsiction and a creation date. An edge is a relation between two nodes, it contains a creation date, a deletion date, and the nature of the relation between the nodes.</p>
 
 <h3 id="entity">Entity</h3>
 
@@ -171,24 +172,67 @@
 
 <p>An intemediary is a middle person or company between an officer and an entity. It gets the money from the officer and signs the contract with the entity. The goal is the hide the officer from the contract.</p>
 
-<h3 id="nodes-and-edges">Nodes and edges</h3>
+<h3 id="address">Address</h3>
 
-<p>This database can be represented as a graph. It contains nodes which are connected using edges. In this project, a node can be an officer, an intermediary or entity. It contains a country, a juridsiction and a creation date. An edge is a relation between two nodes, it contains a creation date and a deletion date.</p>
+<p>For intermediary, officer, and entity, the address is contained in another node called address. To retrive the address of those first nodes, you therefore need to follow the edges of type ‘address_of’.</p>
+
+<h3 id="country-vs-jurisdiction">Country vs Jurisdiction</h3>
+
+<p>Nodes can be defined by jurisdictions and origin countries. It is imporant to define the difference between those two terms. An origin country is the physical location an entity, while a jurisdiction is the country whose law the entity obeys to.</p>
 
 <h1 id="relevant-statistics-about-panama-papers">Relevant statistics about Panama papers</h1>
 
-<p>Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
-Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
+<p>The database contains <strong>1’906’686 nodes</strong> and <strong>3’142’523 edges</strong>.</p>
 
-<h2 id="important-relations-in-panama-papers-maps">Important relations in Panama papers &lt;!MAPS&gt;</h2>
+<p>The node that has the most <strong>outgoing edges</strong> has <strong>36373</strong> outgoing edges and the node that has the most <strong>incoming edges</strong> has <strong>37338</strong> outgoing edges.</p>
 
-<p>Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
-Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
+<p><strong>29.55%</strong> of edges have a <strong>start date</strong> and among those, <strong>22.32%</strong> have an <strong>end date</strong>. They range from <strong>1960-03-10</strong> to <strong>2015-12-31</strong>. Whereas the entities creation dates range from <strong>1960-01-01</strong> to <strong>2015-12-31</strong>.</p>
 
-<h1 id="what-is-our-participation-in-this-project-research-questions">What is our participation in this project? (Research questions)</h1>
+<p>Some edges have the same start and end country. The top 3 countries with the most outgoing edges not pointing towards themselves are :</p>
+<ol>
+  <li><strong>Hong Kong</strong> with <strong>169’161</strong> outgoing edges</li>
+  <li><strong>USA</strong> with <strong>105’267</strong> outgoing edges.</li>
+  <li><strong>China</strong> with <strong>94’434</strong> outgoing edges.</li>
+</ol>
 
-<p>Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
-Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
+<p>Likewise, some edges have the same start and end jursidiction. The top 3 jurisdictions with the most incoming edges are :</p>
+<ol>
+  <li><strong>British Virgin Islands</strong> with <strong>523’869</strong> outgoing edges</li>
+  <li><strong>Malta</strong> with <strong>214’848</strong> outgoing edges.</li>
+  <li><strong>Bermuda</strong> with <strong>154’931</strong> outgoing edges.</li>
+</ol>
+
+<p>We are considering start countries and end jurisdictions because relationships always go from people towards the entity. And the people have a country code and entities have a jurisdiction.</p>
+
+<p>In the chart below we can see the nodes’ types distribution. What stands out is that there is a very small number of intermediaries compared to the number of entitites and officier.</p>
+
+<p><img src="/ADA_Project_Cobra/Plots/0.png" alt="png" /></p>
+
+<h2 id="which-countries-contribute-the-most-to-tax-evasion">Which countries contribute the most to tax evasion?</h2>
+
+<p>A first great way to get insight into the data is to plot on a map the countries with the most outgoing connections.</p>
+
+<p>This is done on the following map : &lt;div&gt; <a href="biggest.html">Top 10 countries</a> &lt;/div&gt;</p>
+
+<p>It is interactive : to see a specific country, click the button on the top right corner.</p>
+
+<p>As we can see from the map above, some of these countries have already jurisdictions with a low tax rate. This can be explained by the fact that many multinationals have their headquarters in tax havens.</p>
+
+<h1 id="what-is-our-goal-in-this-project-research-questions">What is our Goal in this Project? (Research Questions)</h1>
+
+<p>We chose this project because tax evaders, and inequalities of wealth is a very hot topic right now. We wanted to see how important the problem was, and if we could find some explanations/causes for tax evasion. Indeed a good understanding of that matter could help finding compromises between tax evaders and governments. One regret we have, was we couldn’t find (and didn’t have time to scrap one) a satisfying database for changes in fiscal policies of countries in order to correlate them with offshore account’s creation. Nevertheless we did find some obvious events that we will detail in question I.</p>
+
+<p>Here is the path we followed to answer all the research questions we imagined at the beginning of this project.</p>
+
+<p>I. We start by analyzing the evolution of the number of offshore societies over time.</p>
+
+<p>II. We then try to see if people are the sole owners of their offshore societies or if they share this ownership with others.</p>
+
+<p>III. Next we investigate to how many offshore societies people are connected to.</p>
+
+<p>IV. Afterwards we try to give some meaning to the very odd distribution of the number of intemediaries.</p>
+
+<p>V. Finally we at the correlation between the location of the offshore societies and location of their owners.</p>
 
 <h2 id="i-how-does-the-number-of-offshore-societies-evolve-over-time">I) How does the number of offshore societies evolve over time?</h2>
 
@@ -196,17 +240,35 @@ Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis
 
 <p>We start by plotting the number of offshore societies creations per month (left plot) and per year (right plot).</p>
 
+<p><img src="/ADA_Project_Cobra/Plots/1.Months.png" alt="png" /></p>
+
+<p>On the left plot we can see that the seasonality of the creation of offshore societies. Of course February is smaller, because it has less days. We can also see that there are less creations in August just as there are fewer business activities during the summer. However it is not as strong as companies’ usual decrease in revenues around this period.</p>
+
 <p><img src="/ADA_Project_Cobra/Plots/1-1.png" alt="png" /></p>
 
-<p>On the left plot we can see that there are peaks in the creations of entities either in january or december.</p>
+<p>On this plot:</p>
 
-<p>On the right plot, we can see a peak in the number of creations of offshore societies between year 1995 and 2000. This corresponds to the internet bubble.</p>
-
-<p>Now we can plot the number of connections established (left) and ended (right) each year.</p>
+<ul>
+  <li>
+    <p>We can see a peak in the number of creations of offshore societies between year 1995 and 2000.
+Our best explanation for this peak is the <strong>Dot-com bubble</strong>.
+The Dot-com bubble was a period of extreme economic speculation in the end of the 90s, which generated lots of profits for some trader’s making them eager to transfer those profits through offshore accounts and avoid taxes.</p>
+  </li>
+  <li>
+    <p>We can see another peak between the years 2004 and 2008.
+Our hypothesis is it was cause by the speculation regarding the real estate market, which caused the 2008 financial crisis. This peak is followed by a sudden decrease, in further graphs we will nevetheless see that it doesn’t imply a decrease in the actual number of accounts.</p>
+  </li>
+</ul>
 
 <p><img src="/ADA_Project_Cobra/Plots/1-2.png" alt="png" /></p>
 
-<p>From the plots above, we can see a peak in the creation of offshore societies and connections established in 2008 and 2009.</p>
+<p>The left plot shows a peak in the creation of edges around 2008-2009. Our two hypothesis for this difference in the date of offshore company creation and edge creation, are both of them are related to inertia :</p>
+<ul>
+  <li><em>Administrative/human inertia</em> : once an offshore company is created it takes time to connect everyone to it, and/or convince everyone to join the movement</li>
+  <li><em>Economic inertia</em> : once an offshore company is created, it generates more money, and, after some time, makes it possible for it to expand and have more employees/shareholders</li>
+</ul>
+
+<p>The right plot (deletion of connections over the years) is more or less similar to the creation of companies. It can explain that some people quit their original company and joined another, or that the government started paying more attention/track down people having links to offshore societies</p>
 
 <p><img src="/ADA_Project_Cobra/Plots/1-3.png" alt="png" /></p>
 
@@ -220,7 +282,7 @@ Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis
 
 <p><img src="/ADA_Project_Cobra/Plots/3-1.png" alt="png" /></p>
 
-<p>We can see that most of the offshore societies have only one owner. And and the number of connections per offshore society decreases in an exponential fashion.</p>
+<p>We can see that most of the offshore societies have only one owner. And the number of connections per offshore society decreases exponentially.</p>
 
 <p>Let’s look at this from an other angle. We can divide these values in four categories depending on the number of connections per offshore society.</p>
 <ol>
@@ -234,6 +296,8 @@ Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis
 
 <p><img src="/ADA_Project_Cobra/Plots/3-2.png" alt="png" /></p>
 
+<p>Half of the people are only related to one company. Those people are most exclusively officers.</p>
+
 <h2 id="iii-to-how-many-offshore-societies-are-people-connected-to">III) To how many offshore societies are people connected to?</h2>
 
 <p>Now we are interested in knowing how likely it is for someone that is already connected to an offshore society to be connected to more than one of these offshore societies.</p>
@@ -246,10 +310,42 @@ Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis
 
 <p><img src="/ADA_Project_Cobra/Plots/2-2.png" alt="png" /></p>
 
-<h2 id="iv-do-people-sign-their-own-contract-with-an-offshore-society-or-do-they-use-an-intermediary">IV) Do people sign their own contract with an offshore society or do they use an intermediary?</h2>
+<p>These distributions show that ownership of a company is a much more privileged relationship. <strong>72.8%</strong> of societies are handled by only one person. We will see below that in <strong>91%</strong> of the cases this person is an intermediary, meaning everything goes through one person, but there might be many people behind, which we can’t tell.</p>
 
-<p>Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus, convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
-Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis, ligula massa adipiscing nisl, ac euismod nibh nisl eu lectus. Fusce vulputate sem at sapien. Vivamus leo. Aliquam euismod libero eu enim. Nulla nec felis sed leo placerat imperdiet. Aenean suscipit nulla in justo. Suspendisse cursus rutrum augue. Nulla tincidunt tincidunt mi. Curabitur iaculis, lorem vel rhoncus faucibus, felis magna fermentum augue, et ultricies lacus lorem varius purus. Curabitur eu amet.</p>
+<h2 id="iv-how-does-the-proportion-of-intermediaries-depend-on-the-category-of-company-number-of-connections-">IV) How does the proportion of intermediaries depend on the category of company (number of connections) ?</h2>
+
+<p>Only <strong>1.35%</strong> of nodes are intermediaries, yet <strong>21.18%</strong> of edges have an intermediary in them. Very few intermediaries play a central role in offshore companies. In the following pie chart we can see the proportion of officers/intermediaries depending on the type of the entity. We kept the same types of entity as in previous analysis : entites with [1] connection, [2-4] connections, [6-9] connections, [10+] connections.</p>
+
+<p><img src="/ADA_Project_Cobra/Q4_all_distrib.png" alt="png" /></p>
+
+<p><img src="/ADA_Project_Cobra/Q4_distribs.png" alt="png" /></p>
+
+<p>As we can see, even if the company has many connections, they don’t need more intermediaries, and therefore the proportion of intermediary becomes very small for companies with a lot of connections.</p>
+
+<p>Intermediary are essential for an offshore company, it at least need one to communicate with. But having more people in the company doesn’t mean you need more intermediaries to do the work. Intermediaries must therefore have a lot of work when connected to a big company.</p>
+
+<p>This raises one question : if intermediaries are connected to big companies, are they connected to fewer companies in number ? In other words : if you’re an intermediary of a big company do you only take care of this one ?</p>
+
+<p>On average an intermediary is connected to <strong>25.1</strong> entities
+On average an intermediary that is at least connected to an entity of category :</p>
+<ul>
+  <li><strong>[1]</strong> is connected to <strong>31.3</strong> entities</li>
+  <li><strong>[2-4]</strong> is connected to <strong>49.2</strong> entities</li>
+  <li><strong>[5-9]</strong> is connected to <strong>42.4</strong> entities</li>
+  <li><strong>[10+]</strong> is connected to <strong>82.0</strong> entities</li>
+</ul>
+
+<p><strong>Note :</strong> It might sound weird that each one of these averages are all higher individually than the global average.</p>
+
+<p>But it actually tells us that intermediaries with many connections have clients (entities) in all of the categories ! Indeed those <em>big</em> intermediaries are therefore overrepresented in those means. This also means that the more connections you have as an intermediary, the more diverse they will be.</p>
+
+<p>This is the opposite of what we predicted, the bigger entities you’re an intermediate of, the more entities you are connected to. This probably means that some people or groups of people are notorious intermediaries and are therefore working for many entities, and their experience makes them attractive for bigger companies.</p>
+
+<p>The domination of some huge intermediaries over the other ones can be clearly seen with the following boxplot, where the mean crushes the median.</p>
+
+<p><img src="/ADA_Project_Cobra/Q4_boxplot.png" alt="png" /></p>
+
+<p><em>*Note: 26 intermediaries with more than 2000 connections were removed because otherwise the boxplot becamse even less readable.</em></p>
 
 <h2 id="v-correlation-between-the-location-of-the-people-and-the-location-of-their-offshore-society">V) Correlation between the location of the people and the location of their offshore society?</h2>
 
@@ -257,9 +353,17 @@ Aliquam convallis sollicitudin purus. Praesent aliquam, enim at fermentum mollis
 
 <p><img src="/ADA_Project_Cobra/Plots/5-1.png" alt="png" /></p>
 
+<p>Another way to see if there is a correlation between these locations is to directly look at a map. The following link is a map to visualize the distribution of the jurisdictions in which each country detains its account :</p>
+<div>
+    <a href="markers.html">Markers map</a>
+</div>
+
+<p>There is a pin for each of the 100 biggest countries. It is interactive : to see the distribution of a country, click on it.</p>
+
 <h1 id="conclusion">Conclusion</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.</p>
+<p>We have been able to correlate the evolution in creation and deletion of nodes/edges with some major economic events. Our data exploration showed that offshore accounts are rarely shared between officers, and generally managed by a few people. We understood that intermediaries are very active people, they handle a lot of different entities. Almost all the entities handled by one person are handled by an intermediary that could possibly hide a massive structure. We were not able to find this information, but we have found some of the main actors of the offshore world, and their localisation. There are some obvious hubs for offshore accounts (Virgin Islands, Malta, Bermuda…).
+Our work will hopefully make you able to explore easily preprocessed useful data yourself in an interactive fashion.</p>
 
 	    
     </div>

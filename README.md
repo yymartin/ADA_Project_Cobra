@@ -18,7 +18,7 @@ After working more with the data we realized this question didn'ts really made s
 5) Is there a correlation between the location of the people and the location of their offshore society?
 
 # Dataset
-We would like to use the Panama Papers dataset. The dataset is organized as a graph, split across multiple csv files. Nodes represent entities, such as people, intermediaries, offshore societies and addresses. While the edges represent links between all these entities. We wish to use all this data (352MB) to recreate a database that will be adapted to our research questions.
+We used the Panama Papers dataset. The dataset is organized as a graph, split across multiple csv files. Nodes represent entities, such as people, intermediaries, offshore societies and addresses. While the edges represent links between all these entities. We wish to use all this data (352MB) to recreate a database that will be adapted to our research questions.
 
 # A list of internal milestones up until project milestone 2
 We've decided to set ourselves three internal milestones, one each week up to project milestone 2 :
@@ -40,4 +40,10 @@ Merged Node/Edge dataframe into one big one (edges_completed).
 If we have some questions, we're going to ask TAs in person during labs and office hours :)
 
 # Datastory
-The datastory is available at https://yymartin.github.io/ADA_Project_Cobra/
+We decided to present our result in the form of a data story. It is available at : https://yymartin.github.io/ADA_Project_Cobra/
+
+# Contribution of group members
+All members contributed equally to the project. But specifically the members focused on :
+* Simon : preprocessing of the data to allow accessing it easily through dataframes, statistics on the data, research question 4, speaking during final presentation
+* Yoan : creating maps, data story setup, research question 1 and 5, poster for final presentation
+* Pierre : creating the visualizations and displaying the results, writing report, research questions 2 and 3, poster for final presentation
