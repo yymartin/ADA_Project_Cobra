@@ -407,7 +407,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -2269,9 +2269,9 @@
             "properties": {
                 "name": "Barbados",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -2381,9 +2381,9 @@
             "properties": {
                 "name": "Bermuda",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -3417,7 +3417,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -3635,7 +3635,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#800026"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -8439,7 +8439,7 @@
             "properties": {
                 "name": "Cayman Islands",
                 "style": {
-                    "fillOpacity": 0,
+                    "fillOpacity": 1,
                     "weight": 0,
                     "fillColor": "blue"
                 },
@@ -12125,9 +12125,9 @@
             "properties": {
                 "name": "Cyprus",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -17211,7 +17211,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -21557,9 +21557,9 @@
             "properties": {
                 "name": "Liberia",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -21725,7 +21725,7 @@
             "properties": {
                 "name": "Liechtenstein",
                 "style": {
-                    "fillOpacity": 0,
+                    "fillOpacity": 1,
                     "weight": 0,
                     "fillColor": "blue"
                 },
@@ -22665,7 +22665,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -22861,9 +22861,9 @@
             "properties": {
                 "name": "Mauritius",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -24437,9 +24437,9 @@
             "properties": {
                 "name": "Netherlands Antilles",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -25169,9 +25169,9 @@
             "properties": {
                 "name": "Niue",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -26681,7 +26681,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -30689,9 +30689,9 @@
             "properties": {
                 "name": "Saint Kitts and Nevis",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -31397,7 +31397,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -31493,7 +31493,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -35577,9 +35577,9 @@
             "properties": {
                 "name": "United Kingdom",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -35615,9 +35615,9 @@
             "properties": {
                 "name": "Guernsey",
                 "style": {
-                    "fillOpacity": 1,
+                    "fillOpacity": 0,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -35655,7 +35655,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
@@ -35691,7 +35691,7 @@
             "properties": {
                 "name": "Isle of Man",
                 "style": {
-                    "fillOpacity": 0,
+                    "fillOpacity": 1,
                     "weight": 0,
                     "fillColor": "blue"
                 },
@@ -37979,7 +37979,7 @@
                 "style": {
                     "fillOpacity": 1,
                     "weight": 0,
-                    "fillColor": "#ffffcc"
+                    "fillColor": "blue"
                 },
                 "highlight": {}
             },
